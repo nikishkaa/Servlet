@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML Login Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div class="main">
+    <!--    <h1>GeeksforGeeks</h1>-->
+    <h3>Enter your age</h3>
+
+    // Пост запрос это безопасный способ отправить креды на сервер
+    <form action="form" method="post">
+        <label for="first">
+            Username:
+        </label>
+        <input type="text"
+               id="first"
+               name="first"
+               placeholder="Enter your name">
+
+        <label for="second">
+            Password:
+        </label>
+        <input type="text"
+               id="second"
+               name="second"
+               placeholder="Enter second name">
+
+
+        <label>gender: </label>
+        <input type="radio"
+               name="gender"
+               value="man"
+        >
+        <label>man</label>
+
+        <input type="radio"
+               name="gender"
+               value="women"
+        >
+        <label>women</label>
+
+
+        <input type="radio"
+               name="gender"
+               value="other"
+        >
+        <label>other</label>
+
+        <br>
+        <label>age</label>
+        <input type="number"
+               name="age"
+               required>
+
+        <div class="wrap">
+            <button type="submit"
+                    Submit>
+            </button>
+        </div>
+    </form>
+    <p>Not registered?
+        <a href="#"
+           style="text-decoration: none;">
+            Create an account
+        </a>
+    </p>
+</div>
+</body>
+
+</html>
