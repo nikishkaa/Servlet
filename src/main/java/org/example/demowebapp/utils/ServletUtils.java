@@ -16,7 +16,7 @@ public class ServletUtils {
 
     public static void include(final String path, final String msg, final HttpServletRequest request,
                                final HttpServletResponse response) throws ServletException, IOException {
-        response.setCharacterEncoding(charset);
+//        response.setCharacterEncoding(charset);
         System.out.println(new Date() + "include for : " + path);
         response.getWriter().println("<h3>" + msg + "</h3>");
         request.getRequestDispatcher(path).forward(request, response);

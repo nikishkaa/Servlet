@@ -33,6 +33,10 @@ public class CoursesServlet extends HttpServlet {
         // 1.2 Get Currency Rate
         double rate = Double.parseDouble(XMLCurrencyParser.getCurrency(code));
 
+        if (code.equals("643")) {
+            rate /= 100;
+        }
+
         // 1.3 Calculate final Amount
         double result = amount * rate;
 
@@ -54,3 +58,6 @@ public class CoursesServlet extends HttpServlet {
 //        out.println("<html><b>Currencies</b><html><table border// =\"0\" width=\"80%\"><tr><th>#</th><th>ID</th><th>Rate</th></tr><tr bgcolor='white'><td>1</td><td>USD</td><td>3.209</td></tr></table></html>\n<body>");
     }
 }
+
+// 1. таск конвертер из 1 валюты в другую
+
