@@ -28,7 +28,7 @@ public class CoursesServlet extends HttpServlet {
         // 1. amount & currencies are presented -> client request to calculate
         // 1.1 gat param values
         long amount = getLongParameter(request, "amount");
-        String code = request.getParameter("code");
+        String code = request.getParameter("NumCode");
 
         // 1.2 Get Currency Rate
         double rate = Double.parseDouble(XMLCurrencyParser.getCurrency(code));
@@ -42,7 +42,7 @@ public class CoursesServlet extends HttpServlet {
 
         // 1.4 Make response
         include(path, "Result Amount" + result, request, response);
-        return;
+//        return;
 
 
 //        response.setContentType("text/html");
